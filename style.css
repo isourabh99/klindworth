@@ -1,0 +1,869 @@
+@font-face {
+    font-family: larken;
+    src: url(./LarkenDEMO-Bold.otf);
+}
+
+@font-face {
+    font-family: larkenthin;
+    src: url(./LarkenDEMO-Thin.otf);
+}
+
+@font-face {
+    font-family: satoshi;
+    src: url(./Satoshi-Light.otf);
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+
+#toogle {
+    height: 7.3vh;
+    width: 9.1vw;
+    background-color: white;
+    border-radius: 5vw;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5.5px;
+    cursor: pointer;
+}
+
+#toogle:active {
+    scale: .95;
+}
+
+#toogle .lines {
+    height: 2.5px;
+    width: 2vw;
+    background-color: #111112;
+}
+
+#toogle:hover {
+    height: 7.3vh;
+    width: 3.8vw;
+    border-radius: 50%;
+    transition: all .3s;
+}
+
+#toogle:hover #line1 {
+    transition: all .3s;
+    position: absolute;
+
+}
+
+#toogle:hover #line2 {
+    transition: all .4s;
+    rotate: -90deg;
+}
+
+#tooglePage {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(36, 38, 43);
+    position: fixed;
+    z-index: 1111;
+    top: -100%;
+    unicode-bidi: isolate;
+    overscroll-behavior: contain;
+}
+
+#tooglePage nav {
+    padding: 0 2.5vw;
+    height: 130px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tooglePage svg .b55f9f1e-d73b-4848-80cb-ec97ab59dae5 {
+    fill: whitesmoke;
+}
+
+#tooglePage nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1.2vw;
+    font-family: satoshi;
+    font-weight: 500;
+}
+
+#tooglePage nav a:hover {
+    color: rgb(172, 147, 118);
+    transition: all .5s;
+}
+
+#tooglePage nav a i {
+    color: rgb(172, 147, 118);
+}
+
+#tooglePageMain {
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+#tooglePageMain #leftSection {
+    height: 80%;
+    width: 50%;
+    padding: 2% 7%;
+}
+
+#tooglePageMain #leftSection h1 {
+    color: rgb(246, 240, 232);
+    font-family: larken;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    line-height: 4rem;
+    cursor: pointer;
+}
+
+#tooglePageMain #leftSection h1:hover {
+    color: rgb(172, 147, 118);
+    transition: all .5s;
+}
+
+#tooglePageMain #rightSection {
+    height: 80%;
+    width: 50%;
+    display: flex;
+    padding: 3% 1%;
+    gap: 1rem;
+}
+
+#tooglePageMain #rightSection .part1 {
+    height: 50%;
+    width: 40%;
+}
+
+#tooglePageMain #rightSection .part2 {
+    height: 50%;
+    width: 40%;
+}
+
+#tooglePageMain #rightSection h2 {
+    font-family: satoshi;
+    color: rgb(172, 147, 118);
+    font-size: 1.3rem;
+    margin-bottom: 2.5vh;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+#tooglePageMain #rightSection p {
+    font-weight: 100;
+    line-height: 2rem;
+    font-family: satoshi;
+    font-size: 1.3rem;
+    color: rgb(246, 240, 232);
+    cursor: pointer;
+}
+
+#tooglePageMain #rightSection p:hover {
+    color: rgb(139, 139, 139);
+    transition: all .5s;
+}
+
+#tooglePage footer {
+    height: 17vh;
+    width: 72%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#tooglePage footer h2 {
+    font-weight: 100;
+    color: rgb(246, 240, 232);
+    font-family: satoshi;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+#tooglePage footer h2:hover {
+    color: rgb(172, 147, 118);
+    transition: all .5s;
+}
+
+#tooglePage footer h2 i {
+    color: rgb(172, 147, 118);
+}
+
+#tooglePage footer p {
+    font-weight: 100;
+    color: rgb(139, 139, 139);
+    font-family: satoshi;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+#toogle1 {
+    height: 7.5vh;
+    width: 3.9vw;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 48%;
+}
+
+#toogle1 i {
+    font-size: 4vh;
+}
+
+#toogle1:hover i {
+    rotate: 80deg;
+    transition: all ease .5s;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ede9e2;
+    position: relative;
+    overflow: hidden;
+}
+
+#page1 nav {
+    padding: 0 2.5vw;
+    height: 130px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#page1 nav a {
+    text-decoration: none;
+    font-size: 1.2vw;
+    font-family: satoshi;
+    font-weight: 500;
+    color: #111112;
+}
+
+#page1 nav a i {
+    color: rgb(172, 147, 118);
+}
+
+#page1 nav a:hover {
+    color: rgb(172, 147, 118);
+    transition: all .5s;
+}
+
+#page1 h1 {
+    font-family: larken;
+    font-size: 185px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 185px;
+    color: #24262B;
+}
+
+#page1 h1 span {
+    color: rgb(172, 147, 118);
+
+}
+
+#page1 h1 span:last-child {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#page1 img {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+#page2 {
+    height: 85vh;
+    width: 100%;
+    background-color: rgb(36, 38, 43);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#page2 img {
+    /* height: 88%; */
+    width: 150%;
+    opacity: .2;
+    /* top: -3%; */
+    position: absolute;
+
+}
+
+#page2 #heading {
+    position: absolute;
+    top: 16vh;
+    left: 50%;
+    transform: translate(-50%, -16%);
+    text-align: center;
+    font-family: larken;
+    font-size: 3.4vw;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+#page2 #heading h1:nth-child(1) {
+    color: rgb(237, 233, 226);
+}
+
+#page2 #heading h1:nth-child(2) {
+    color: rgb(172, 147, 118);
+}
+
+#page2>p {
+    position: absolute;
+    left: 18.3%;
+    top: 57.5vh;
+    font-size: 1.28rem;
+    transform: rotate(-90deg);
+    color: rgb(172, 147, 118);
+}
+
+#page2 #content {
+    height: 40vh;
+    width: 55vw;
+    /* background-color:rgba(36, 38, 43, 0.7); */
+    position: absolute;
+    top: 50vh;
+    right: 8.6%;
+    color: rgb(237, 233, 226);
+    font-size: 28.125px;
+    /* font-size: 2rem; */
+    font-family: satoshi;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+#page3 {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(36, 38, 43);
+    overflow: hidden;
+    position: relative;
+}
+
+#page3 #page3Elements {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 6vh;
+    padding: 0 2vw;
+}
+
+#page3 #page3Elements #leftElem {
+    height: 67vh;
+    width: 50vw;
+}
+
+#page3 #page3Elements #rightElem {
+    height: 284px;
+    width: 417px;
+}
+
+#leftElem img {
+    height: 100%;
+}
+
+#rightElem img {
+    height: 100%;
+}
+
+#more {
+    height: 15vh;
+    width: 15vh;
+    background-color: #ede9e2;
+    position: absolute;
+    opacity: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+}
+
+.page3Links h2 {
+    color: rgb(246, 240, 232);
+    font-size: 1.3rem;
+    font-family: satoshi;
+    cursor: pointer;
+    font-weight: 100;
+}
+
+.page3Links h2 i {
+    color: rgb(172, 147, 118);
+}
+
+.page3Links p {
+    color: rgb(139, 139, 139);
+    font-size: 1.2rem;
+    font-family: satoshi;
+}
+
+#rightLink {
+    position: absolute;
+    left: 6.5vw;
+    top: 78vh;
+}
+
+#leftLink {
+    position: absolute;
+    right: 22.2vw;
+    top: 48vh;
+
+}
+
+#page4 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(36, 38, 43);
+    /* overflow: hidden; */
+    padding: 0 2.5vw;
+    position: relative;
+}
+
+#page4 h1 {
+    font-family: larken;
+    text-align: center;
+    font-size: 26vw;
+    color: #EDE9E2;
+    position: sticky;
+    top: 3%;
+}
+
+#page4 .imgs {
+    position: sticky;
+    top: 5%;
+    filter: brightness(1);
+}
+
+#page4 .imgs h1 {
+    position: absolute;
+    font-size: 5vw;
+    margin: 5vh 5vw;
+    /* background-color: #000000; */
+}
+
+#page4 .imgs img {
+    width: 100%;
+    height: 100vh;
+    filter: brightness(.7);
+}
+
+#page4Footer {
+    height: 30vh;
+    width: 100%;
+    background-color: rgb(36, 38, 43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+}
+
+#page4Footer button {
+    width: 10vw;
+    height: 7.5vh;
+    border-radius: 5vw;
+    background-color: transparent;
+    border: 1px solid rgb(172, 147, 118);
+    font-size: 1.3rem;
+    color: #EDE9E2;
+    font-family: satoshi;
+}
+
+#page4Footer button:hover {
+    background-color: rgb(172, 147, 118);
+    transition: all ease-in-out .3s;
+}
+
+#page5 {
+    height: 135vh;
+    width: 100%;
+    background-color: #ede9e2;
+    /* background-color: #000000; */
+    overflow: hidden;
+    position: relative;
+    padding: 0 3vw;
+}
+
+#page5 #services {
+    height: 40vh;
+    width: 50%;
+    padding-top: 13vh;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+#page5 #services>p {
+    color: rgb(172, 147, 118);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+#page5 #services h1 {
+    color: rgb(0, 0, 0);
+    font-size: 3rem;
+    font-family: larkenthin;
+    font-weight: 600;
+}
+
+#page5 .swiper {
+    width: 96%;
+    height: auto;
+    position: absolute;
+    top: 40vh;
+    overflow: hidden;
+    margin-top: 2vh;
+}
+
+#page5 .swiper-slide img {
+    width: 35vw;
+}
+
+#page5 .swiper-slide h3 {
+    text-align: start;
+    font-family: satoshi;
+    margin-top: 1.5vh;
+    font-weight: 100;
+    font-size: 1.4rem;
+}
+
+#page5 .swiper-slide h3 i {
+    color: rgb(172, 147, 118);
+}
+
+#page5 .swiper-slide p {
+    text-align: start;
+    font-family: satoshi;
+    margin-top: 1vh;
+    font-size: 1.25rem;
+    color: #919191;
+}
+
+#page5 .swiper-button-next {
+    position: absolute;
+    right: 6.5vw;
+    top: 3vh;
+    background-color: #ede9e2;
+    padding: 5vh;
+    border: 1px solid rgb(172, 147, 118);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #000000;
+}
+
+#page5 .swiper-button-prev {
+    position: absolute;
+    top: 15vh;
+    left: 83.4vw;
+    z-index: 111;
+    background-color: #ede9e2;
+    padding: 5vh;
+    border: 1px solid rgb(172, 147, 118);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #111112;
+}
+
+#page5 .swiper-button-next::after {
+    display: none;
+}
+
+#page5 .swiper-button-prev::after {
+    display: none;
+}
+
+#page5 #page5Footer {
+    height: 35vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 100vh;
+}
+
+#page5Footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page5Footer button {
+    width: 10vw;
+    height: 7.5vh;
+    border-radius: 5vw;
+    background-color: transparent;
+    border: 1px solid rgb(172, 147, 118);
+    font-size: 1.3rem;
+    color: #232323;
+    font-family: satoshi;
+}
+
+#page5Footer button:hover {
+    background-color: rgb(172, 147, 118);
+    transition: all ease-in-out .3s;
+    color: #EDE9E2;
+}
+
+#page6 {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgb(36, 38, 43, .0), rgb(36, 38, 43, .0), rgb(36, 38, 43)),
+        url(https://klindworthroofing.com/wp-content/uploads/2024/03/Klindworth-Van.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+#page7 {
+    min-height: 100vh;
+    position: relative;
+    background-color: rgb(36, 38, 43);
+    /* display: flex; */
+
+}
+
+#page7 .swiper {
+    width: 100%;
+    height: 100%;
+    /* position: absolute;
+z-index: 1111; */
+}
+
+#page7 .swiper-slide {
+    display: flex;
+    padding: 10vh 8vw;
+    gap: 6vw;
+    /* background-color: rgb(36, 38, 43); */
+
+}
+
+#page7 .swiper-slide .leftSwiper {
+    background-color: rgb(36, 38, 43);
+    height: 50vh;
+    width: 45%;
+    color: #EDE9E2;
+    font-family: larkenthin;
+    font-size: 1.2rem;
+    line-height: 1.25;
+    font-weight: 100;
+
+}
+
+#page7 .swiper-slide .leftSwiper p {
+    text-rendering: optimizeLegibility;
+    color: #919191;
+    font-family: satoshi;
+    margin-top: 5vh;
+}
+
+#page7 .swiper-slide .rightSwiper {
+    height: 80vh;
+    width: 42%;
+    background-color: rgb(36, 38, 43);
+}
+
+#page7 .swiper-slide .rightSwiper img {
+    width: 100%;
+    height: 100%;
+}
+
+#page7 .swiper-button-next {
+    position: absolute;
+    top: 14vh;
+    right: 5vw;
+    background-color: transparent;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    border: 1px solid rgb(172, 147, 118);
+    color: #919191;
+    font-size: 1.5rem;
+}
+
+#page7 .swiper-button-prev {
+    position: absolute;
+    top: 28vh;
+    left: 89vw;
+    background-color: transparent;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    border: 1px solid rgb(172, 147, 118);
+    color: #919191;
+    font-size: 1.5rem;
+}
+
+#page7 .swiper-button-next::after {
+    content: none;
+
+}
+
+#page7 .swiper-button-prev::after {
+    content: none;
+}
+
+#page7 #kudos {
+    font-size: 25rem;
+    font-family: larken;
+    color: #EDE9E2;
+    text-align: center;
+}
+
+#page7 #footer {
+    text-align: center;
+    margin-top: -25vh;
+
+
+}
+
+#page7 #footer p {
+    color: rgb(172, 147, 118);
+    font-family: satoshi;
+    font-size: 1.3rem;
+    line-height: 3;
+}
+
+#page7 #footer h1 {
+    color: #EDE9E2;
+    font-family: larken;
+    font-size: 5rem;
+    line-height: 1;
+}
+
+#page7 #footer span {
+    color: rgb(172, 147, 118);
+}
+
+#page7 #footer button {
+    padding: 2.2vh 2.5vw;
+    border-radius: 5vw;
+    font-size: 1.2rem;
+    border: 1px solid rgb(172, 147, 118);
+    background-color: transparent;
+    margin: 4vh 15vh;
+    color: #EDE9E2;
+}
+
+#page7 #footer button:hover {
+    background-color: rgb(172, 147, 118);
+    transition: all ease-in-out .5s;
+}
+
+.page8 {
+    height: 65vh;
+    width: 100%;
+    background-color: #ede9e2;
+    font-family: satoshi;
+    font-size: 1.3rem;
+
+}
+
+.page8 #container1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 5vh 7vw;
+}
+
+.page8 #container1 #container1left p:hover {
+    color: #919191;
+    transition: all ease .5s;
+    cursor: pointer;
+}
+
+.page8 #container1 #container1right {
+    display: flex;
+    justify-content: space-between;
+    gap: 10vw;
+}
+
+.page8 #container1 #container1right div p:first-child:hover {
+    color: rgb(172, 147, 118);
+    transition: all ease .5s;
+    cursor: pointer;
+}
+
+.page8 #container1 #container1right div p:last-child {
+    color: #4242428e;
+}
+
+.page8 #container1 #container1right div p:first-child::after {
+    content: " â†’";
+    color: #ac9376;
+}
+
+.page8 #container2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 5vh 7vw;
+}
+
+.page8 #container2 #container2right #email {
+    border: none;
+    background-color: transparent;
+    width: 50vw;
+    border-bottom: 1px solid rgb(172, 147, 118);
+    outline: none;
+    padding: 2vh 0;
+    font-size: 1.7rem;
+    font-family: larkenthin;
+    font-weight: 100;
+    margin-bottom: 2vh;
+}
+
+.page8 #container2 #container2right p::after {
+    content: " â†’";
+    color: #ac9376;
+}
+
+.page8 #container2 #container2right p:hover {
+    color: rgb(172, 147, 118);
+    transition: all ease .5s;
+    cursor: pointer;
+}
+
+.page8 #container3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 5vh 7vw;
+    font-size: 1.1rem;
+    color: #4242428e;
+}
